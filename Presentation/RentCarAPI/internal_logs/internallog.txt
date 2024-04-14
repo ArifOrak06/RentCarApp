@@ -1,0 +1,32 @@
+2024-04-14 14:07:20.6965 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-04-14 14:07:20.7452 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-14 14:07:20.7452 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ASUS\source\repos\RentCarApp\Presentation\RentCarAPI\nlog.config
+2024-04-14 14:07:20.7609 Info Configuration initialized.
+2024-04-14 14:07:36.0400 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-04-14 14:07:36.0593 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-14 14:07:36.0647 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ASUS\source\repos\RentCarApp\Presentation\RentCarAPI\nlog.config
+2024-04-14 14:07:36.0647 Info Configuration initialized.
+2024-04-14 14:08:05.7743 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-04-14 14:08:05.7942 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-14 14:08:05.7942 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ASUS\source\repos\RentCarApp\Presentation\RentCarAPI\nlog.config
+2024-04-14 14:08:05.8083 Info Configuration initialized.
+2024-04-14 14:12:09.5352 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-04-14 14:12:09.5530 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-14 14:12:09.5530 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ASUS\source\repos\RentCarApp\Presentation\RentCarAPI\nlog.config
+2024-04-14 14:12:09.5641 Info Configuration initialized.
+2024-04-14 14:14:18.7153 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-04-14 14:14:18.7335 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-14 14:14:18.7335 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ASUS\source\repos\RentCarApp\Presentation\RentCarAPI\nlog.config
+2024-04-14 14:14:18.7335 Info Configuration initialized.
+2024-04-14 14:15:56.7144 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-04-14 14:15:56.7385 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-14 14:15:56.7385 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ASUS\source\repos\RentCarApp\Presentation\RentCarAPI\nlog.config
+2024-04-14 14:15:56.7508 Info Configuration initialized.
+2024-04-14 14:16:35.7848 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-04-14 14:16:35.8091 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-14 14:16:35.8091 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ASUS\source\repos\RentCarApp\Presentation\RentCarAPI\nlog.config
+2024-04-14 14:16:35.8091 Info Configuration initialized.
+2024-04-14 14:17:03.9832 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-04-14 14:17:04.0089 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-14 14:17:04.0151 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ASUS\source\repos\RentCarApp\Presentation\RentCarAPI\nlog.config
+2024-04-14 14:17:04.0151 Info Configuration initialized.
