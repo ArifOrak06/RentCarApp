@@ -25,7 +25,7 @@ namespace Persistence.Repositories
 
 		public void Delete(T entity) => _context.Set<T>().Remove(entity);
 
-		public async Task<IEnumerable<T>> GetAllAsync(bool trackChanges, Expression<Func<T, bool>> predicate = null, params Expression<Func<T, object>>[] includeProperties)
+		public async Task<List<T>> GetAllAsync(bool trackChanges, Expression<Func<T, bool>> predicate = null, params Expression<Func<T, object>>[] includeProperties)
 		{
 			IQueryable<T> query = _context.Set<T>();
 			if (!trackChanges && predicate is not null)
