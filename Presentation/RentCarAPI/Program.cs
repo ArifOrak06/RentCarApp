@@ -28,8 +28,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
 	options.SuppressModelStateInvalidFilter = true;
 });
-
-
+builder.Services.ConfigureCors();
 
 // presentation Layer services to Registration
 builder.Services.ConfigureNlog();
@@ -52,7 +51,7 @@ if (app.Environment.IsDevelopment())
 }
 app.ConfigureExceptionHandler(logger);
 app.UseHttpsRedirection();
-
+app.UseCors("CorsPolicy");
 app.UseAuthorization();
 
 app.MapControllers();

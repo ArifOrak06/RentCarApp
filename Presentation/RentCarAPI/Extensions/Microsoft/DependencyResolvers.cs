@@ -36,5 +36,15 @@ namespace RentCarAPI.Extensions.Mictosoft
 			services.AddAutoMapper(typeof(BannerProfile));
 
 		}
+		public static void ConfigureCors(this IServiceCollection services)
+		{
+			services.AddCors(options =>
+			{
+				options.AddPolicy("CorsPolicy", builder =>
+				{
+					builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().WithExposedHeaders("X-Pagination");
+				});
+			});
+		}
 	}
 }

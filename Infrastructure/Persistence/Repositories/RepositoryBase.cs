@@ -28,17 +28,25 @@ namespace Persistence.Repositories
 		public async Task<List<T>> GetAllAsync(bool trackChanges, Expression<Func<T, bool>> predicate = null, params Expression<Func<T, object>>[] includeProperties)
 		{
 			IQueryable<T> query = _context.Set<T>();
-			if (!trackChanges && predicate is not null)
+		
+			if (!trackChanges)
 			{
-				query = query.Where(predicate);
+				if(predicate is not null)
+					query = query.Where(predicate);
 				if (includeProperties.Any())
 					foreach (var property in includeProperties)
 						query = query.Include(property).AsNoTracking();
-				return await query.ToListAsync();
+
 			}
-			if (includeProperties.Any())
-				foreach (var property in includeProperties)
-					query = query.Include(property);
+			else
+			{
+				if (predicate is not null)
+					query = query.Where(predicate);
+				if (includeProperties.Any())
+					foreach (var property in includeProperties)
+						query = query.Include(property);
+			}
+		
 
 			return await query.ToListAsync();
 
@@ -49,7 +57,7 @@ namespace Persistence.Repositories
 			IQueryable<T> query = _context.Set<T>().Where(predicate);
 			if (!trackChanges)
 			{
-				
+
 				if (includeProperties.Any())
 					foreach (var property in includeProperties)
 						query = query.Include(property).AsNoTracking();

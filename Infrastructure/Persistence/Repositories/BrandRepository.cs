@@ -16,7 +16,7 @@ namespace Persistence.Repositories
 		public async Task<PagedList<Brand>> GetAllBrandsAsync(bool trackChanges, BrandRequestParameters brandRequestParameters, Expression<Func<Brand, bool>> predicate, params Expression<Func<Brand, object>>[] includeProperties)
 		{
 			var entities = await GetByFilter(trackChanges,predicate,includeProperties).ToListAsync();
-			if (entities.Any())
+			if (!entities.Any())
 				throw new Exception("Sistemde kayıtlı olan herhangi bir marka bulunmamaktadır.");
 			return PagedList<Brand>.ToPagedList(entities, brandRequestParameters.PageNumber, brandRequestParameters.PageSize);
 		}

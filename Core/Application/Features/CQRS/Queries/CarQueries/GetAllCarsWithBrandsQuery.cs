@@ -6,8 +6,10 @@ namespace Application.Features.CQRS.Queries.CarQueries
 {
     public class GetAllCarsWithBrandsQuery : CarRequestParameters, IRequest<(List<GetAllCarsWithBrandsQueryResult> result, MetaData metaData)>
     {
-        public GetAllCarsWithBrandsQuery(int pageNumber, int pageSize) : base(pageNumber, pageSize)
+        public GetAllCarsWithBrandsQuery(int pageNumber, int pageSize) 
         {
+            PageNumber = pageNumber;
+            PageSize = pageSize;
         }
     }
 }
