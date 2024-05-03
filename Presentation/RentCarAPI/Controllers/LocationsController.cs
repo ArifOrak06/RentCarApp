@@ -24,32 +24,32 @@ namespace RentCarAPI.Controllers
 			return Ok(result);
 		}
 		[HttpGet("{id:int}")]
-		public async Task<IActionResult> GetOneLocation([FromRoute(Name="id")]int id)
+		public async Task<IActionResult> GetOneLocation([FromRoute(Name = "id")] int id)
 		{
 			var result = await _mediator.Send(id);
 			return Ok(result);
 		}
 		[ServiceFilter(typeof(ValidationFilterAttribute))]
 		[HttpPost]
-		public async Task<IActionResult> CreateOneLocation([FromBody]CreateOneLocationCommand command)
+		public async Task<IActionResult> CreateOneLocation([FromBody] CreateOneLocationCommand command)
 		{
 			var result = await _mediator.Send(command);
 			return StatusCode(201, result);
 		}
-		[ServiceFilter(typeof (ValidationFilterAttribute))]
-		[HttpPut("{id:int")]
-		public async Task<IActionResult> UpdateOneLocation([FromRoute(Name="id")]int id, [FromBody]UpdateOneLocationCommand command)
+		[ServiceFilter(typeof(ValidationFilterAttribute))]
+		[HttpPut("{id:int}")]
+		public async Task<IActionResult> UpdateOneLocation([FromRoute(Name = "id")] int id, [FromBody] UpdateOneLocationCommand command)
 		{
 			if (id != command.Id)
 				throw new LocationParametersNotMatchedBadRequestException(id, command.Id);
 			var result = await _mediator.Send(command);
 			return StatusCode(201, result);
 		}
-		[HttpDelete("{id:int")]
-		public async Task<IActionResult> DeleteOneLocation([FromRoute(Name="id")]int id)
+		[HttpDelete("{id:int}")]
+		public async Task<IActionResult> DeleteOneLocation([FromRoute(Name = "id")] int id)
 		{
 			var result = await _mediator.Send(new HardRemoveOneLocationCommand(id));
-			return StatusCode(200,result);
+			return StatusCode(200, result);
 		}
 	}
 }

@@ -24,21 +24,21 @@ namespace RentCarAPI.Controllers
 			return Ok(result);
 		}
 		[HttpGet("{id:int}")]
-		public async Task<IActionResult> GetOneFooterAddress([FromRoute(Name="id")]int id)
+		public async Task<IActionResult> GetOneFooterAddress([FromRoute(Name = "id")] int id)
 		{
 			var result = await _mediator.Send(new GetOneFooterAddressByIdQuery(id));
 			return Ok(result);
 		}
 		[ServiceFilter(typeof(ValidationFilterAttribute))]
 		[HttpPost]
-		public async Task<IActionResult> CreateOneFooterAddress([FromBody]CreateOneFooterAddressCommand command)
+		public async Task<IActionResult> CreateOneFooterAddress([FromBody] CreateOneFooterAddressCommand command)
 		{
 			var result = await _mediator.Send(command);
 			return StatusCode(201, result);
 		}
 		[ServiceFilter(typeof(ValidationFilterAttribute))]
 		[HttpPut("{id:int}")]
-		public async Task<IActionResult> UpdateOneFooterAddress([FromRoute(Name="id")]int id,UpdateOneFooterAddressCommand command)
+		public async Task<IActionResult> UpdateOneFooterAddress([FromRoute(Name = "id")] int id, UpdateOneFooterAddressCommand command)
 		{
 			if (id != command.Id)
 				throw new FooterAddressParametersNotMatchedBadRequestException(id, command.Id);
@@ -46,7 +46,7 @@ namespace RentCarAPI.Controllers
 			return StatusCode(201, result);
 		}
 		[HttpDelete("{id:int}")]
-		public async Task<IActionResult> DeleteOneFooterAddress([FromRoute(Name="id")]int id)
+		public async Task<IActionResult> DeleteOneFooterAddress([FromRoute(Name = "id")] int id)
 		{
 			var result = await _mediator.Send(new HardRemoveOneFooterAddressCommand(id));
 			return StatusCode(200, result);

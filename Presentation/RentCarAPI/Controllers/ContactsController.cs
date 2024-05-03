@@ -24,21 +24,21 @@ namespace RentCarAPI.Controllers
 			return Ok(result);
 		}
 		[HttpGet("{id:int}")]
-		public async Task<IActionResult> GetOneContact([FromRoute(Name ="id")]int id)
+		public async Task<IActionResult> GetOneContact([FromRoute(Name = "id")] int id)
 		{
 			var result = await _mediator.Send(new GetOneContactByIdQuery(id));
 			return Ok(result);
 		}
 		[ServiceFilter(typeof(ValidationFilterAttribute))]
 		[HttpPost]
-		public async Task<IActionResult> CreateOneContact([FromBody]CreateOneContactCommand command)
+		public async Task<IActionResult> CreateOneContact([FromBody] CreateOneContactCommand command)
 		{
 			var result = await _mediator.Send(command);
 			return StatusCode(201, result);
 		}
 		[ServiceFilter(typeof(ValidationFilterAttribute))]
-		[HttpPost]
-		public async Task<IActionResult> UpdateOneContact([FromRoute(Name="id")]int id, [FromBody]UpdateOneContactCommand command)
+		[HttpPut]
+		public async Task<IActionResult> UpdateOneContact([FromRoute(Name = "id")] int id, [FromBody] UpdateOneContactCommand command)
 		{
 			if (id != command.Id)
 				throw new ContactParametersNotMatchedBadRequestException(id, command.Id);
@@ -46,7 +46,7 @@ namespace RentCarAPI.Controllers
 			return StatusCode(201, result);
 		}
 		[HttpDelete("{id:int}")]
-		public async Task<IActionResult> DeleteOneContact([FromRoute(Name="id")]int id)
+		public async Task<IActionResult> DeleteOneContact([FromRoute(Name = "id")] int id)
 		{
 			var result = await _mediator.Send(new HardRemoveOneContactCommand(id));
 			return StatusCode(204);

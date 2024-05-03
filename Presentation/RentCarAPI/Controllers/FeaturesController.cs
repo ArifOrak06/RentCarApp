@@ -31,27 +31,27 @@ namespace RentCarAPI.Controllers
 		}
 		[ServiceFilter(typeof(ValidationFilterAttribute))]
 		[HttpPost]
-		public async Task<IActionResult> CreateOneFeature([FromBody]CreateOneFeatureCommand command)
+		public async Task<IActionResult> CreateOneFeature([FromBody] CreateOneFeatureCommand command)
 		{
 			var result = await _mediator.Send(command);
 			return StatusCode(201, result);
 		}
 		[ServiceFilter(typeof(ValidationFilterAttribute))]
 		[HttpPut("{id:int}")]
-		public async Task<IActionResult> UpdateOneFeature([FromRoute(Name="id")]int id, [FromBody]UpdateOneFeatureCommand command)
+		public async Task<IActionResult> UpdateOneFeature([FromRoute(Name = "id")] int id, [FromBody] UpdateOneFeatureCommand command)
 		{
-			if(id != command.Id)
+			if (id != command.Id)
 				throw new FeatureParametersNotMatchedBadRequestException(id, command.Id);
 			var result = await _mediator.Send(command);
 			return StatusCode(201, result);
 		}
 		[HttpDelete("{id:int}")]
-		public async Task<IActionResult> DeleteOneFeature([FromRoute(Name="id")]int id)
+		public async Task<IActionResult> DeleteOneFeature([FromRoute(Name = "id")] int id)
 		{
 			var result = await _mediator.Send(new HardRemoveOneFeatureCommand(id));
-			return StatusCode(201,result);
+			return StatusCode(201, result);
 		}
 
-		
+
 	}
 }
